@@ -1,0 +1,14 @@
+<%= 
+require 'csv'
+require_relative 'recipe.rb'
+require_relative 'cookbook.rb'
+%>
+
+
+<ul>
+  <% [ 'Papillard', 'ssaunier' ].each do |username| %>
+    <li>
+      <%= username %>
+    </li>
+  <% end %>
+</ul>

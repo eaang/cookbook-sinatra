@@ -1,0 +1,15 @@
+<h2>Make a new recipe!</h2>
+<form method="POST" action="/new_recipe">
+  <p>Recipe Name:</br>
+  <input type="text" name="name"></p>
+
+  <p>Description:</br>
+  <input type="text" name="description"></p>
+
+  <p>Have you made this recipe before?</br>
+  <label class='radio'><input type='radio' name='status' value='true'>Yes</label>
+  <label class='radio'><input type='radio' name='status' value='false'>No</label>
+  </p>
+
+  <input type="submit" value="Create New Recipe">
+</form>

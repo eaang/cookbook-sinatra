@@ -1,0 +1,7 @@
+<h2>Here are all your recipes!</h2>
+<% @recipes.each_with_index do |each, index| %>
+  <li>
+    <%= each.status == "false" ? (made = " ") : (made = "X") %>
+    <%= puts "#{index + 1}. [#{made}] #{each.name} (#{each.prep_time}) - #{each.difficulty}" %>
+  </li>
+<% end %>

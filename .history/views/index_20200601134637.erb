@@ -1,0 +1,11 @@
+<h2>Here are all your recipes!</h2>
+
+<ol>
+  <% @cookbook.all.each_with_index do |each, index| %>
+    <li>
+      <% each.status == "true" ? (made = "X") : (made = " ") %>
+      <%= "[#{made}] #{each.name} - #{each.describe}" %> <a href='delete'>Delete</a>
+    </li>
+  <% end %>
+</ol>
+<a href='new_recipe'>Create New Recipe</a>

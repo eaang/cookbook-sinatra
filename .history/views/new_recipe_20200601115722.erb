@@ -1,0 +1,24 @@
+<form method="POST" action="/new_recipe">
+  <p>Recipe Name:</br>
+  <input type="text" name="name"></p>
+
+  <p>Ingredients:</br>
+  (please enter each ingredient on a new line): </br>
+  <textarea name="ingredients" rows="10"></textarea></p>
+
+  <p>Directions:</br>
+  (please enter each step on a new line, and do not use numbers): </br>
+  <textarea name="method" rows="10"></textarea></p>
+
+  <p>Prep Time: <input type="text" name="preptime"></br>
+  Cooking Time: <input type="text" name="cooktime"></p>
+  
+  <p>Difficulty:</br>
+    <input type="radio" name="difficulty" value="easy">
+    <label for="male">Easy</label><br>
+    <input type="radio" name="difficulty" value="mid">
+    <label for="female">More effort</label><br>
+    <input type="radio" name="difficulty" value="hard">
+    <label for="other">A challenge</label></p>
+  <input type="submit">
+</form>

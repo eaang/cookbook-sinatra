@@ -1,0 +1,10 @@
+<h2>Here are all your recipes!</h2>
+
+
+<% @cookbook.all.each_with_index do |each, index| %>
+  <li>
+  <%= each.status == "false" ? (made = " ") : (made = "X") %>
+    <%= puts "#{index + 1}. [#{each.made}] #{each.name} (#{each.prep_time}) - #{each.difficulty}" %>
+  </li>
+<% end %>
+<a href="">Create New Recipe</a>

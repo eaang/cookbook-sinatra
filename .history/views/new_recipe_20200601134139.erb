@@ -1,0 +1,13 @@
+<form method="POST" action="/new_recipe">
+  <p>Recipe Name:</br>
+  <input type="text" name="name"></p>
+
+  <p>Description:</br>
+  <input type="text" name="description"></p>
+
+  <p>Have you made this recipe before?</br>
+  <label class='radio'><input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />Yes</label>
+  </p>
+
+  <input type="submit">
+</form>

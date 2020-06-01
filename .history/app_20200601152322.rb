@@ -38,7 +38,7 @@ delete '/delete/:id' do
 end
 
 post '/patch/:id' do
-  @cookbook = Cookbook.new('recipes.csv')
+  @cookbook = Cookbook.new('recipes.csv')params[:id].to_s
   @cookbook.mark_done(params[:id].to_i)
   redirect to('/')
 end

@@ -1,0 +1,15 @@
+<h2>Here are all your recipes!</h2>
+
+<ol>
+  <% @cookbook.all.each_with_index do |each, id| %>
+    <li>
+      <% each.status == "true" ? (made = "⦿") : (made = " ") %>
+      <%= "[#{made}] #{each.name} - #{each.describe}" %> <a href='made'>✔</a>
+      <form action="/delete/<%=@cookbook.all.id%>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete?">
+    </form>
+    </li>
+  <% end %>
+</ol>
+<a href='new_recipe'>Create New Recipe</a>

@@ -6,7 +6,6 @@ require 'pry-byebug'
 require 'better_errors'
 require_relative 'recipe.rb'
 require_relative 'cookbook.rb'
-use Rack::MethodOverride
 
 configure :development do
   use BetterErrors::Middleware
@@ -28,17 +27,5 @@ post '/new_recipe' do
                       params[:description].to_s,
                       params[:status].to_s)
   @cookbook.add_recipe(recipe)
-  redirect to('/')
-end
-
-delete '/delete/:id' do
-  @cookbook = Cookbook.new('recipes.csv')
-  @cookbook.remove_recipe(params[:id].to_i)
-  redirect to('/')
-end
-
-post '/patch/:id' do
-  @cookbook = Cookbook.new('recipes.csv')
-  @cookbook.mark_done(params[:id].to_i)
   redirect to('/')
 end

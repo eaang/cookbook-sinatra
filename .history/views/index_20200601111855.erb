@@ -1,0 +1,6 @@
+<% @cookbook.all.each do |each, index| %>
+  <li>
+    <%= each.status == "false" ? (made = " ") : (made = "X") %>
+    <%= puts "#{index + 1}. [#{made}] #{each.name} (#{each.prep_time}) - #{each.difficulty}" %>
+  </li>
+<% end %>
